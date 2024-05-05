@@ -1,6 +1,5 @@
 <odoo>
     <data>
-        <!-- First modification -->
         <record model="ir.ui.view" id="view_sale_order_form_inherit_1">
             <field name="name">sale.order.form.inherit</field>
             <field name="model">sale.order</field>
@@ -11,25 +10,6 @@
                     <field name="customer_email"/>
                     <!-- Add the number of articles field -->
                     <field name="num_articles"/>
-                </xpath>
-            </field>
-        </record>
-        
-        <!-- Second modification -->
-        <record model="ir.ui.view" id="view_sale_order_form_inherit_2">
-            <field name="name">sale.order.form.inherit.commercial</field>
-            <field name="model">sale.order</field>
-            <field name="inherit_id" ref="sale.view_order_form"/>
-            <field name="arch" type="xml">
-                <!-- Add a new page titled "Commercial Information" -->
-                <xpath expr="//notebook" position="inside">
-                    <page string="Commercial Information">
-                        <group>
-                            <field name="commercial_name"/>
-                            <field name="state_count"/>
-                            <field name="total_amount"/>
-                        </group>
-                    </page>
                 </xpath>
             </field>
         </record>
